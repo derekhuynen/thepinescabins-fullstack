@@ -1,6 +1,6 @@
 const Cabin = require('../models/cabin');
 const cabins = require('./cabinsList.js');
-const {getConnection} = require("../database/connection");
+const {getConnection} = require("../database/connection.js");
 
 
 

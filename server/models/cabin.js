@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import * as connections from "../database/connection.js";
 
 const Schema = mongoose.Schema;
 
@@ -27,4 +28,4 @@ CabinSchema
     });
 
 //Export model
-export default mongoose.model('Cabin', CabinSchema);
+export default connections.db.model('Cabin', CabinSchema);
