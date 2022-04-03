@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
@@ -13,10 +13,9 @@ const CabinSchema = new Schema(
         link: {type: String, required: true},
         rating: {type: Number, required: true},
         reviews: {type: Number, required: true},
-        amenities: {type: Array},
+        amenities: {type: []},
         coordinates: {type: Object},
         description: {type: String}
-
     }
 );
 
@@ -28,4 +27,4 @@ CabinSchema
     });
 
 //Export model
-module.exports = mongoose.model('Cabin', CabinSchema);
+export default mongoose.model('Cabin', CabinSchema);

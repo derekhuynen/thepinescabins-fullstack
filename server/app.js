@@ -1,18 +1,20 @@
-const express = require('express');
-const path = require('path');
-const logger = require('morgan');
-const compression = require('compression');
-const helmet = require('helmet');
+import express from 'express';
+import logger from 'morgan';
+import compression from 'compression';
+import helmet from 'helmet';
 
-const indexRouter = require('./routes/index');
-const catalogRouter = require('./routes/catalog');
-const {startServer} = require("./database/connection");
-const cors = require('cors');
+import {cabinRouter} from './routes/cabinRouter.js'
+
+import mongoose from "mongoose";
+import cors from 'cors';
+
 
 const app = express();
 app.use(cors());
 
-startServer();
+mongoose.connect("mongodb://localhost:27017/First").then(()=>{
+    console.log("Connected to DB")
+}).catch(() => console.log("Failed to Connect to DB"));
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -20,8 +22,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(helmet());
 app.use(compression()); // Compress all routes
 
-app.use('/', indexRouter);
-app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
+app.get('/', function(res, req){
+    res.send("API Works")
+});
+app.use('/cabin', cabinRouter);  // Add catalog routes to middleware chain.
 
 // catch 404 and forward to error handler
 app.use(function(err,req, res, next) {
