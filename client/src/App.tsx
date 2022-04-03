@@ -1,19 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+    Link
+} from "react-router-dom";
+
+import DisplayCabins from "./page/DisplayCabins";
+import IcalTest from "./page/ICalTest";
+
+
+
 
 function App() {
-  const [data, setData] = React.useState(null);
 
-  React.useEffect(() => {
-    fetch("/api")
-        .then((res) => res.json())
-        .then((data) => setData(data.message));
-  }, []);
 
   return (
     <div className="App">
-      <p>{!data ? "Loading..." : data}</p>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<DisplayCabins />} />
+                <Route path="/Ical" element={<IcalTest />} />
+            </Routes>
+        </BrowserRouter>
     </div>
   );
 }
