@@ -12,11 +12,14 @@ router.use(function addObject(req,res,next){
     next();
 })
 
-//BASIC Crud
+
+//Basic CRUD
 router.get('/', CRUD.findAll);
 router.get('/:id', CRUD.findOne);
-router.post('/',jsonParser, CRUD.createOne);
+router.post('/', jsonParser, CRUD.createOne);
 router.delete('/:id', CRUD.deleteOne);
+router.put('/:id', CRUD.updateOne);
+router.put('/:id/true', CRUD.findOneAndUpdate);
 
 
 // GET all events for a Cabin

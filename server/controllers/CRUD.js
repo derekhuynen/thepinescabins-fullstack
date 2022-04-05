@@ -43,9 +43,10 @@ async function createOne(req, res, next) {
         if (err) {
             return res.status(400).json(printMessage(`Failed to Create Item`, 400, req))
         }
+
         res.status(201).json({
             Message: printMessage(`Item Created`, 200, req),
-            item: doc
+            item: item
         });
         });
 }

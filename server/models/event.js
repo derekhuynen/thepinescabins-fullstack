@@ -32,7 +32,7 @@ EventSchema.statics.checkData = function (req) {
 
 EventSchema.statics.createItem = function (req) {
 
-    const item = new req.myModel({
+    return new req.myModel({
         cabinID: req.body.cabinID,
         cabinCode: req.body.cabinCode,
         uid: req.body.uid,
@@ -42,18 +42,9 @@ EventSchema.statics.createItem = function (req) {
         endDate: req.body.endDate,
         url: req.body.url,
         lastFour: req.body.url
-    });
-
-    return item
+    })
 };
 
-
-// // Virtual for Event URL
-// EventSchema
-//     .virtual('url')
-//     .get(function () {
-//         return '/api/event/' + this.id;
-//     });
 
 //Export model
 export default connections.db.model('Event', EventSchema);

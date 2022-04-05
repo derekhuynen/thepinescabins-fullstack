@@ -1,5 +1,6 @@
 import {cabinRouter} from "./cabinRouter.js";
 import {eventRouter} from "./eventRouter.js";
+import {ratingRouter} from "./ratingRouter.js";
 
 
 
@@ -20,5 +21,5 @@ export default function Routes(app){
 
     // //Cabin Router
     // // @url  /api/event
-    // app.use('/api/rating', ratingRouter);
+    app.use('/api/rating', ratingRouter);
 }
