@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
-import Logger from '../Logger.js';
+import Logger from './Logger.js';
+import 'dotenv/config'
 
 
+const MONGO_URI = process.env.CONNECTION_STRING;
 
-const MONGO_URI = "mongodb://localhost:27017/First";
-
-export const db = mongoose.createConnection(MONGO_URI);
+export const db = mongoose.createConnection("mongodb://localhost:27017/Website");
 
 // handlers
 db.on('connecting', () => {

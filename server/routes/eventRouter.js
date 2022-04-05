@@ -1,28 +1,26 @@
 import express from "express";
-import cabinController from '../controllers/cabinController.js';
 import bodyParser from "body-parser";
-import Cabin from "../models/cabin.js";
+import eventController from "../controllers/eventController.js";
+import Event from "../models/event.js";
 import CRUD from "../controllers/CRUD.js";
 const router = express.Router();
 const jsonParser = bodyParser.json()
 
 
 router.use(function addObject(req,res,next){
-    req.myModel = Cabin;
+    req.myModel = Event;
     next();
 })
 
-
-//Basic CRUD
+//BASIC Crud
 router.get('/', CRUD.findAll);
 router.get('/:id', CRUD.findOne);
-router.post('/', jsonParser, CRUD.createOne);
+router.post('/',jsonParser, CRUD.createOne);
 router.delete('/:id', CRUD.deleteOne);
-router.put('/:id', CRUD.updateOne);
 
 
-// PUT request to update cabin.
-router.put('/:id', cabinController.updateOne);
+// GET all events for a Cabin
+router.get('/cabin/:cabinID', eventController.findAllForCabin);
 
 
-export { router as cabinRouter }
+export { router as eventRouter, }

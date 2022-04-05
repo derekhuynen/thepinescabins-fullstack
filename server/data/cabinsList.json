@@ -1,11 +1,11 @@
 {
-    "title": "cabins",
+    "cabinName": "Cabins",
     "date": "4/3/2022",
     "author": "Derek H.",
     "cabins": [
         {
-            "title": "Winterland Cottage",
-            "code": 51072736,
+            "cabinName": "Winterland Cottage",
+            "cabinCode": 51072736,
             "guests": 5,
             "adults": 5,
             "bedrooms": 2,
@@ -13,9 +13,8 @@
             "beds": 2,
             "pet": true,
             "license": "2021-1689",
-            "link": "https://airbnb.com/h/winterlandcottage",
-            "rating": 5.0,
-            "reviews": 17,
+            "url": "https://airbnb.com/h/winterlandcottage",
+            "rating": {},
             "amenities": [
                 "Spa",
                 "EV",
@@ -28,8 +27,8 @@
             "description": "Winterland Cottage is your ultimate mountain getaway. This 920 sq foot cabin is nestled in one of the most desirable mountain neighborhoods of Big Bear Lake.  Enjoy the magnificent 9000+ sq foot completely fenced yard with spa, covered deck and BBQ. We have a newly installed Level 2 charger."
         },
         {
-            "title": "Stunning 3BR/2BA",
-            "code": 50516656,
+            "cabinName": "Stunning 3BR/2BA",
+            "cabinCode": 50516656,
             "guests": 7,
             "adults": 7,
             "bedrooms": 3,
@@ -37,9 +36,8 @@
             "beds": 5,
             "pet": true,
             "license": "2021-0561",
-            "link": "https://airbnb.com/h/poplarcottageretreat",
-            "rating": 5.0,
-            "reviews": 22,
+            "url": "https://airbnb.com/h/poplarcottageretreat",
+            "rating": {},
             "amenities": [
                 "Spa",
                 "EV",
@@ -52,8 +50,8 @@
             "description": "Enjoy a perfect family getaway in this stunning cottage in a quiet, central Foxfarm neighborhood. The one-story home boasts 1500 sq of space with gorgeous living areas, 3 spacious bedrooms, 2 elegant bathrooms, and fun outdoor entertainment including a hot tub and large decks. You will be close to all Big Bear has to offer - hiking trails, the zoo, ski resorts, The Village, and more."
         },
         {
-            "title": "Pine View Cabin",
-            "code": 54183112,
+            "cabinName": "Pine View Cabin",
+            "cabinCode": 54183112,
             "guests": 8,
             "adults": 8,
             "bedrooms": 3,
@@ -61,9 +59,8 @@
             "beds": 6,
             "pet": true,
             "license": "2021-0000",
-            "link": "https://airbnb.com/h/pineviewcabinbigbear",
-            "rating": 5.0,
-            "reviews": 0,
+            "url": "https://airbnb.com/h/pineviewcabinbigbear",
+            "rating": {},
             "amenities": [
                 "Spa",
                 "Foosball",
@@ -76,8 +73,8 @@
             "description": "Welcome to Pine View Cabin! Your vacation begins with a scenic drive up the hill. Located on the eastern edge of Big Bear Lake, access from Hwy 38 avoids most traffic congestion. Central to everything Big Bear while affording guests a quiet home away from home. Fully fenced backyard. Inviting open floor plan for family and friends. Includes complimentary coffee, tea, hot chocolate and oatmeal. Stackable washer and dryer. Master suite with dedicated work space and sparkling clean indoor hot tub."
         },
         {
-            "title": "Wolf Lodge",
-            "code": 20553821,
+            "cabinName": "Wolf Lodge",
+            "cabinCode": 20553821,
             "guests": 4,
             "adults": 4,
             "bedrooms": 2,
@@ -85,9 +82,8 @@
             "beds": 2,
             "pet": true,
             "license": "2022-0020",
-            "link": "https://airbnb.com/h/big-bear-lake-cabin",
-            "rating": 4.87,
-            "reviews": 219,
+            "url": "https://airbnb.com/h/big-bear-lake-cabin",
+            "rating": {},
             "amenities": [
                 "A-Frame",
                 "Spa Tub",
@@ -100,8 +96,8 @@
             "description": "Get cozy in the loft swing and watch birds at the terrace feeder below. Surrounded by pines and junipers, this hillside home has great views and a retro-modern feel. Stained glass windows, a hand-carved fire mantel, and a Jacuzzi tub with a view of the slopes are just a few of the highlights."
         },
         {
-            "title": "FireSide Manor",
-            "code": 52991431,
+            "cabinName": "FireSide Manor",
+            "cabinCode": 52991431,
             "guests": 10,
             "adults": 8,
             "bedrooms": 3,
@@ -109,9 +105,8 @@
             "beds": 6,
             "pet": false,
             "license": "2021-0730",
-            "link": "https://airbnb.com/h/firesidemanor",
-            "rating": 5.0,
-            "reviews": 11,
+            "url": "https://airbnb.com/h/firesidemanor",
+            "rating": {},
             "amenities": [
                 "Spa",
                 "Arcade Games",
@@ -124,8 +119,8 @@
             "description": "Welcome to the Fireside Manor! 2500 Sq Ft. 3 Bedrooms, 2 Bathrooms with a flat lot. Great location in the Fox Farm area, close to slopes, grocery stores, and our favorite, MoonRidge Coffee Company. This is our family's new Airbnb but we have another one in San Diego with over 150 - 5 star reviews. Like with our San Diego Airbnb, we have taken exception care to ensure Fireside Manor is set up for an amazing stay!"
         },
         {
-            "title": "Holiday Monk",
-            "code": 51813696,
+            "cabinName": "Holiday Monk",
+            "cabinCode": 51813696,
             "guests": 10,
             "adults": 8,
             "bedrooms": 4,
@@ -133,9 +128,8 @@
             "beds": 7,
             "pet": false,
             "license": "2021-5796",
-            "link": "https://airbnb.com/h/holidaymonk",
-            "rating": 5.0,
-            "reviews": 1,
+            "url": "https://airbnb.com/h/holidaymonk",
+            "rating": {},
             "amenities": [
                 "Spa",
                 "Pool Table",
@@ -148,8 +142,8 @@
             "description": "Feel at home in this one of a kind Big Bear Cabin. This is a recently remodeled contemporary chalet in the desirable Fox Farm neighborhood. This mid-century cabin has a vaulted ceiling living room with access to a large deck. A game room is located downstairs and a 85\" 4K Smart TV is in the living room and a 65\" 4K Smart TV is in the master bedroom. Basic Cable is also provided. Stay in this quiet and secluded cul-de-sac that is only 2 minutes from all the main supermarkets in Big Bear."
         },
         {
-            "title": "Whispering Pines",
-            "code": 31447346,
+            "cabinName": "Whispering Pines",
+            "cabinCode": 31447346,
             "guests": 4,
             "adults": 4,
             "bedrooms": 2,
@@ -157,9 +151,8 @@
             "beds": 2,
             "pet": false,
             "license": "2019-0210",
-            "link": "https://airbnb.com/h/whispheringpines",
-            "rating": 4.92,
-            "reviews": 88,
+            "url": "https://airbnb.com/h/whispheringpines",
+            "rating": {},
             "amenities": [
                 "Fast Wifi",
                 "BBQ",
@@ -172,8 +165,8 @@
             "description": "It’s summer in Big Bear Lake. Time to get out and get active! Check out the natural beauty and serenity of the area while hiking to Castle Rock, biking the Alpine Pedal Path, or exploring restaurants and shopping that are all within easy reach. Then in the cool evening curl up by the fire in our perfectly appointed cabin for 4. We can provide a safe storage place for your personal bike. Military Friendly. We have a no pet policy."
         },
         {
-            "title": "Scandia Chalet",
-            "code": 48473833,
+            "cabinName": "Scandia Chalet",
+            "cabinCode": 48473833,
             "guests": 10,
             "adults": 8,
             "bedrooms": 3,
@@ -181,9 +174,8 @@
             "beds": 5,
             "pet": false,
             "license": "2021-0150",
-            "link": "https://airbnb.com/h/chaletscandia",
-            "rating": 4.84,
-            "reviews": 19,
+            "url": "https://airbnb.com/h/chaletscandia",
+            "rating": {},
             "amenities": [
                 "BBQ",
                 "Pool Table",
@@ -197,8 +189,8 @@
             "description": "Family friendly home near the slopes and lake. Remodeled game room and master bedroom/bathroom. Great snow play area in back yard. You are a few minutes from all Big Bear has to offer, and can still relax in the mountains."
         },
         {
-            "title": "Papa Bear Cabin",
-            "code": 48935837,
+            "cabinName": "Papa Bear Cabin",
+            "cabinCode": 48935837,
             "guests": 5,
             "adults": 5,
             "bedrooms": 2,
@@ -206,9 +198,8 @@
             "beds": 3,
             "pet": false,
             "license": "2021-0078",
-            "link": "https://airbnb.com/h/papabearcabin",
-            "rating": 5.0,
-            "reviews": 11,
+            "url": "https://airbnb.com/h/papabearcabin",
+            "rating": {},
             "amenities": [
                 "Washer/Dryer",
                 "Patio",
@@ -222,8 +213,8 @@
             "description": "Located in the desirable centrally located Fox Farm neighborhood. Bear Mountain and Snow Summit are both nearby. This cozy cabin is a perfect place to relax and get a real mountain experience as it offers comfortable amenities, beautiful cabin decor, all of your cooking needs, a large yard with beautiful trees, a propane BBQ, games, TV, fireplace, wifi, and is just up the street from grocery stores, restaurants, and the lake. Secure your bicycles on our wrap-around porch."
         },
         {
-            "title": "Tree Hütte",
-            "code": 47569527,
+            "cabinName": "Tree Hütte",
+            "cabinCode": 47569527,
             "guests": 6,
             "adults": 6,
             "bedrooms": 3,
@@ -231,9 +222,8 @@
             "beds": 6,
             "pet": false,
             "license": "2021-0073",
-            "link": "https://airbnb.com/h/treehutte",
-            "rating": 4.96,
-            "reviews": 28,
+            "url": "https://airbnb.com/h/treehutte",
+            "rating": {},
             "amenities": [
                 "Fast Wifi",
                 "Record Player",
@@ -246,8 +236,8 @@
             "description": "Our 1969, mid-century chalet has been given a mountain modern update and is ready for your next getaway. Rustic and modern, meets camp vibes in the trees. Cozy 1100+ sq ft cabin is nestled in the trees in a quiet cul-de-sac in highly desirable Moonridge. 3 bedroom, 1 bath, with level driveway. The large lot provides plenty of space, outdoor deck, trees, + your own private sledding hill. Just a short drive to the new zoo, Bear mountain resort, hiking, biking, & more."
         },
         {
-            "title": "Gold Rush Lodge",
-            "code": 45592076,
+            "cabinName": "Gold Rush Lodge",
+            "cabinCode": 45592076,
             "guests": 14,
             "adults": 8,
             "bedrooms": 3,
@@ -255,9 +245,8 @@
             "beds": 8,
             "pet": false,
             "license": "2020-0381",
-            "link": "https://airbnb.com/h/goldrushlodge",
-            "rating": 5.0,
-            "reviews": 35,
+            "url": "https://airbnb.com/h/goldrushlodge",
+            "rating": {},
             "amenities": [
                 "Patio",
                 "BBQ",
@@ -271,8 +260,8 @@
             "description": "This luxury home is nestled in the beautiful Fox Farm Estates. Only minutes to the lake, and ski slopes. Enjoy over 2700 sq feet of this beautiful corner lot home. Our home comfortably sleeps 14 guest, has a pool table and a large outdoor deck with plenty of seating and a beautiful outdoor BBQ. BBQ and outdoor couch not available during the winter"
         },
         {
-            "title": "Bear Haven Cabin",
-            "code": 11111111,
+            "cabinName": "Bear Haven Cabin",
+            "cabinCode": 11111111,
             "guests": 8,
             "adults": 8,
             "bedrooms": 3,
@@ -280,9 +269,8 @@
             "beds": 5,
             "pet": false,
             "license": "376-CA20140284",
-            "link": "https://www.houfy.com/lodging/bear-haven-cabin/1474",
-            "rating": 5.0,
-            "reviews": 78,
+            "url": "https://www.houfy.com/lodging/bear-haven-cabin/1474",
+            "rating": {},
             "amenities": [
                 "Arcade",
                 "55\" 4k TV",
@@ -295,8 +283,8 @@
             "description": "Bear Haven Cabin is a peaceful high elevation escape located within the exclusive High Timber Ranch neighborhood of Upper Moonridge, in Big Bear Lake, California. Enjoy solitude and tree house like views out over the fir and oak treetops of gorgeous Bear Valley. Private without being remote, enjoy Bear Mountain skiing, golf, hiking, biking, boating, swimming, fishing and much more! Only a short 10 minute drive from Big Bear's Alpine Animal Zoo, shopping, dining and nightlife."
         },
         {
-            "title": "Apple Tree Cottage",
-            "code": 46361768,
+            "cabinName": "Apple Tree Cottage",
+            "cabinCode": 46361768,
             "guests": 7,
             "adults": 7,
             "bedrooms": 4,
@@ -304,9 +292,8 @@
             "beds": 5,
             "pet": true,
             "license": "2020-0439",
-            "link": "https://www.airbnb.com/h/appletreecottagebigbear",
-            "rating": 4.93,
-            "reviews": 40,
+            "url": "https://www.airbnb.com/h/appletreecottagebigbear",
+            "rating": {},
             "amenities": [
                 "BBQ",
                 "Dog Friendly",
@@ -319,8 +306,8 @@
             "description": "One of the best locations in Big Bear! A quiet street you can walk to the lake, 1 min drive to the parking of Snow Summit; 3 min drive to the Village. A newly renovated house with comfortable sleeping for up to 7 guests. Large private front/back yards surround the house making a great play area for kids, dogs, or a place to relax. Walk to the end of the street to arrive at Meadows Park-with a playground, Dog Park, and sport court. A long driveway that can accommodate 3 cars or your boat/Jet Ski"
         },
         {
-            "title": "Cozy Family Chalet",
-            "code": 39511260,
+            "cabinName": "Cozy Family Chalet",
+            "cabinCode": 39511260,
             "guests": 4,
             "adults": 4,
             "bedrooms": 2,
@@ -328,9 +315,8 @@
             "beds": 3,
             "pet": false,
             "license": "2021-3517",
-            "link": "https://airbnb.com/h/coyotegrovechalet-bigbearlake",
-            "rating": 4.94,
-            "reviews": 97,
+            "url": "https://airbnb.com/h/coyotegrovechalet-bigbearlake",
+            "rating": {},
             "amenities": [
                 "Yard",
                 "Fire Pit",

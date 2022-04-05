@@ -1,44 +1,45 @@
-const Cabin = require('../models/cabin');
-const cabins = require('./cabinsList.js');
-const {getConnection} = require("../database/connection.js");
+import Cabin from "../models/cabin.js";
+import fs from 'fs';
 
 
-
-function addList(){
+function addList(cabins){
     cabins.map((cabin, index)=> {
         const temp = new Cabin({
-            title: cabin.title,
+            cabinName: cabin.cabinName,
+            cabinCode: cabin.cabinCode,
             guests: cabin.guests,
+            adults: cabin.adults,
             bedrooms: cabin.bedrooms,
             bathrooms: cabin.bathrooms,
             beds: cabin.beds,
+            pet: cabin.pet,
             license: cabin.license,
-            link: cabin.link,
-            rating: cabin.rating,
-            reviews: cabin.reviews,
+            url: cabin.url,
             amenities: cabin.amenities,
             coordinates: {latitude: cabin.coordinates.latitude, longitude: cabin.coordinates.latitude},
             description: cabin.description
         })
-        if(index === 0 ){
-            insert(temp)
-        }
+        // if(index === 0 ){
+        //     insert(temp)
+        // }
     })
 }
 
-
-
-async function insert(cabin){
-
-    await cabin.save(function (err) {
+function insert(cabin){
+    cabin.save(function (err) {
         if (err) { console.log(err) }
         // Successful - redirect to new book record.
         console.log("Cabin Added")
     });
 }
 
-addList();
+function load(){
+    const data = fs.readFileSync('cabinsList.json', 'utf-8');
+    const doc = JSON.parse(data)
+    addList(doc.cabins)
 
+}
 
+load();
 
 
