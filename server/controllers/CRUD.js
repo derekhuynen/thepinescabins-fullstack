@@ -39,6 +39,7 @@ async function createOne(req, res, next) {
     }
 
     const item = await req.myModel.createItem(req);
+
     await item.save(function (err, doc) {
         if (err) {
             return res.status(400).json(printMessage(`Failed to Create Item`, 400, req))
@@ -91,7 +92,7 @@ async function findOneAndUpdate(req, res, next){
 }
 
 
-function printMessage(message, status, req){
+export function printMessage(message, status, req){
     return {
         Message: message,
         Status: status,

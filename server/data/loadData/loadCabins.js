@@ -1,4 +1,4 @@
-import Cabin from "../models/cabin.js";
+import Cabin from "../../models/cabin.js";
 import fs from 'fs';
 
 
@@ -22,13 +22,13 @@ function addList(cabins){
         // if(index === 0 ){
         //     insert(temp)
         // }
+        insert(temp)
     })
 }
 
 function insert(cabin){
     cabin.save(function (err) {
         if (err) { console.log(err) }
-        // Successful - redirect to new book record.
         console.log("Cabin Added")
     });
 }

@@ -16,7 +16,7 @@ const CabinSchema = new Schema({
         license: {type: String, required: true},
         url: {type: String, required: true},
         rating: {
-                type: Schema.Types.ObjectId, ref: 'Rating'
+                type: Schema.ObjectId, ref: 'Rating'
         },
         amenities: {type: []},
         coordinates: {

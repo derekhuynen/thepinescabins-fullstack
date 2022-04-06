@@ -1,33 +1,36 @@
 
 import Cabin from "../models/cabin.js";
+import {printMessage} from "./CRUD.js";
 
 
 
-//
-//
-//
-//     // // Handle cabin update on POST.
-//     // function updateOne(req, res,next) {
-//     //
-//     //     const temp = validation(req);
-//     //
-//     //     if (!temp.errors.isEmpty()) {
-//     //         res.send(temp.errors.array());
-//     //     }else{
-//     //
-//     //         var upsertData = temp.cabin.toObject();
-//     //         delete upsertData._id;
-//     //
-//     //         Cabin.findByIdAndUpdate({_id: req.params.id}, upsertData, {new: true}, function (err,doc) {
-//     //             if (err) { return next(err); }
-//     //             res.send(doc);
-//     //         });
-//     //     }
-//     // }
-//
-//
-//
-//
-// export default {updateOne}
+
+async function findAll (req, res, next) {
+    req.myModel.find({}).populate('rating').exec(
+        await function (err, doc) {
+            if (err) {
+                return res.status(400).json(printMessage(`Find Items Failed.`, 400, req))
+            }
+            res.status(200).json({
+                Message: printMessage(`Found Items`, 200, req),
+                item: doc
+            });
+        })
+}
+
+async function findOne (req, res, next) {
+    req.myModel.findById(req.params.id).populate('rating').exec(await function(err, doc) {
+        if (err) {
+            return res.status(400).json(printMessage(`Find Item Failed: ${req.params.id}`, 400, req))
+        }
+        res.status(200).json({
+            Message: printMessage(`Found Item: ${req.params.id}`, 200, req),
+            item: doc
+        });
+    });
+}
+
+
+export default {findAll, findOne}
 
 
