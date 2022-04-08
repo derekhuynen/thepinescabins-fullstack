@@ -16,6 +16,14 @@ function loadData() {
                 (cabin) => {
                     if (cabin.url.includes("airbnb")) {
                         dataFromURL(cabin)
+                    }else{
+                        return new Rating({
+                            cabinCode: cabin.cabinCode,
+                            overallRating: 0,
+                            overallCount: 0,
+                            ratings: {}
+                        })
+
                     }
                 })
         }
@@ -36,21 +44,23 @@ function dataFromURL(cabin) {
                 ratings: results.ratings
             })
         }).then((rating) => {
-        rating.save(function (err, doc) {
-            if (err) {
-                console.log("Rating Failed to Save")
-            } else {
-                Cabin.updateOne({_id: cabin._id}, {rating: rating}, function (err, doc) {
-                    if (err) {
-                        console.log("Cabin Update Failed");
-                    }
-                })
-            }
-        })
+            save(rating,cabin)
     }).catch(err => console.log(err));
 }
 
-
+function save(rating,cabin){
+    rating.save(function (err, doc) {
+        if (err) {
+            console.log("Rating Failed to Save")
+        } else {
+            Cabin.updateOne({_id: cabin._id}, {rating: rating}, function (err, doc) {
+                if (err) {
+                    console.log("Cabin Update Failed");
+                }
+            })
+        }
+    })
+}
 
 
 function parseData(data, cabin) {

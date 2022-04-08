@@ -15,6 +15,7 @@
             "license": "2021-1689",
             "url": "https://airbnb.com/h/winterlandcottage",
             "rating": {},
+            "photos": ["winterland-1.jpg","winterland-2.jpg","winterland-3.jpg","winterland-4.jpg","winterland-5.jpg"],
             "amenities": [
                 "Spa",
                 "EV",
@@ -38,6 +39,7 @@
             "license": "2021-0561",
             "url": "https://airbnb.com/h/poplarcottageretreat",
             "rating": {},
+            "photos": ["poplar-1.jpg","poplar-2.jpg","poplar-3.jpg","poplar-4.jpg","poplar-5.jpg"],
             "amenities": [
                 "Spa",
                 "EV",
@@ -61,6 +63,7 @@
             "license": "2021-0000",
             "url": "https://airbnb.com/h/pineviewcabinbigbear",
             "rating": {},
+            "photos": ["division-1.jpg","division-2.jpg","division-3.jpg","division-4.jpg","division-5.jpg"],
             "amenities": [
                 "Spa",
                 "Foosball",
@@ -84,6 +87,7 @@
             "license": "2022-0020",
             "url": "https://airbnb.com/h/big-bear-lake-cabin",
             "rating": {},
+            "photos": ["wolf-1.jpg","wolf-2.jpg","wolf-3.jpg","wolf-4.jpg","wolf-5.jpg"],
             "amenities": [
                 "A-Frame",
                 "Spa Tub",
@@ -107,6 +111,7 @@
             "license": "2021-0730",
             "url": "https://airbnb.com/h/firesidemanor",
             "rating": {},
+            "photos": ["fireside-1.jpg","fireside-2.jpg","fireside-3.jpg","fireside-4.jpg","fireside-5.jpg"],
             "amenities": [
                 "Spa",
                 "Arcade Games",
@@ -130,6 +135,7 @@
             "license": "2021-5796",
             "url": "https://airbnb.com/h/holidaymonk",
             "rating": {},
+            "photos": ["holiday-1.jpg","holiday-2.jpg","holiday-3.jpg","holiday-4.jpg","holiday-5.jpg"],
             "amenities": [
                 "Spa",
                 "Pool Table",
@@ -153,6 +159,7 @@
             "license": "2019-0210",
             "url": "https://airbnb.com/h/whispheringpines",
             "rating": {},
+            "photos": ["whispering-1.jpg","whispering-2.jpg","whispering-3.jpg","whispering-4.jpg","whispering-5.jpg"],
             "amenities": [
                 "Fast Wifi",
                 "BBQ",
@@ -176,6 +183,7 @@
             "license": "2021-0150",
             "url": "https://airbnb.com/h/chaletscandia",
             "rating": {},
+            "photos": ["scandia-1.jpg","scandia-2.jpg","scandia-3.jpg","scandia-4.jpg","scandia-5.jpg"],
             "amenities": [
                 "BBQ",
                 "Pool Table",
@@ -200,6 +208,7 @@
             "license": "2021-0078",
             "url": "https://airbnb.com/h/papabearcabin",
             "rating": {},
+            "photos": ["papabear-1.jpg","papabear-2.jpg","papabear-3.jpg","papabear-4.jpg","papabear-5.jpg"],
             "amenities": [
                 "Washer/Dryer",
                 "Patio",
@@ -224,6 +233,7 @@
             "license": "2021-0073",
             "url": "https://airbnb.com/h/treehutte",
             "rating": {},
+            "photos": ["tree-1.jpg","tree-2.jpg","tree-3.jpg","tree-4.jpg","tree-5.jpg"],
             "amenities": [
                 "Fast Wifi",
                 "Record Player",
@@ -247,6 +257,7 @@
             "license": "2020-0381",
             "url": "https://airbnb.com/h/goldrushlodge",
             "rating": {},
+            "photos": ["gold-1.jpg","gold-2.jpg","gold-3.jpg","gold-4.jpg","gold-5.jpg"],
             "amenities": [
                 "Patio",
                 "BBQ",
@@ -271,6 +282,7 @@
             "license": "376-CA20140284",
             "url": "https://www.houfy.com/lodging/bear-haven-cabin/1474",
             "rating": {},
+            "photos": ["bear-1.jpg","bear-2.jpg","bear-3.jpg","bear-4.jpg","bear-5.jpg"],
             "amenities": [
                 "Arcade",
                 "55\" 4k TV",
@@ -281,29 +293,6 @@
                 "longitude": -116.84694716402498
             },
             "description": "Bear Haven Cabin is a peaceful high elevation escape located within the exclusive High Timber Ranch neighborhood of Upper Moonridge, in Big Bear Lake, California. Enjoy solitude and tree house like views out over the fir and oak treetops of gorgeous Bear Valley. Private without being remote, enjoy Bear Mountain skiing, golf, hiking, biking, boating, swimming, fishing and much more! Only a short 10 minute drive from Big Bear's Alpine Animal Zoo, shopping, dining and nightlife."
-        },
-        {
-            "cabinName": "Apple Tree Cottage",
-            "cabinCode": 46361768,
-            "guests": 7,
-            "adults": 7,
-            "bedrooms": 4,
-            "bathrooms": 1,
-            "beds": 5,
-            "pet": true,
-            "license": "2020-0439",
-            "url": "https://www.airbnb.com/h/appletreecottagebigbear",
-            "rating": {},
-            "amenities": [
-                "BBQ",
-                "Dog Friendly",
-                "Washer/Dryer"
-            ],
-            "coordinates": {
-                "latitude": 34.24553206841711,
-                "longitude": -116.89731739763288
-            },
-            "description": "One of the best locations in Big Bear! A quiet street you can walk to the lake, 1 min drive to the parking of Snow Summit; 3 min drive to the Village. A newly renovated house with comfortable sleeping for up to 7 guests. Large private front/back yards surround the house making a great play area for kids, dogs, or a place to relax. Walk to the end of the street to arrive at Meadows Park-with a playground, Dog Park, and sport court. A long driveway that can accommodate 3 cars or your boat/Jet Ski"
         },
         {
             "cabinName": "Cozy Family Chalet",
@@ -317,6 +306,7 @@
             "license": "2021-3517",
             "url": "https://airbnb.com/h/coyotegrovechalet-bigbearlake",
             "rating": {},
+            "photos": ["cozy-1.jpg","cozy-2.jpg","cozy-3.jpg","cozy-4.jpg","cozy-5.jpg"],
             "amenities": [
                 "Yard",
                 "Fire Pit",

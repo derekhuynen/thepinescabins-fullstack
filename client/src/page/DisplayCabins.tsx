@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Cabin,getCabins, filterConditions} from "../data/Cabin";
 import CabinCard from "../components/CabinCard";
-import '../css/CabinCSS.css'
+import '../css/Cabin.css'
 
 
 function displayCabins(cabins: Cabin[]){

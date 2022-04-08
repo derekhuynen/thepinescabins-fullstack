@@ -1,5 +1,5 @@
 import {Cabin} from "../data/Cabin";
-import '../css/CabinCSS.css'
+import '../css/Cabin.css'
 
 
 export default function CabinCard({cabin}: {cabin: Cabin }) {

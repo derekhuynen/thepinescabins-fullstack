@@ -18,6 +18,7 @@ const CabinSchema = new Schema({
         rating: {
                 type: Schema.ObjectId, ref: 'Rating'
         },
+        photos: {type: []},
         amenities: {type: []},
         coordinates: {
                 latitude: {type: Number},
@@ -55,6 +56,7 @@ CabinSchema.statics.createItem = function (req) {
                 license: req.body.license,
                 url: req.body.url,
                 rating: req.body.rating,
+                photos: req.body.photos,
                 amenities: req.body.amenities,
                 coordinates: req.body.coordinates,
                 description: req.description

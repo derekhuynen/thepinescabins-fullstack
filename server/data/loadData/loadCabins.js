@@ -15,6 +15,7 @@ function addList(cabins){
             pet: cabin.pet,
             license: cabin.license,
             url: cabin.url,
+            photos: cabin.photos,
             amenities: cabin.amenities,
             coordinates: {latitude: cabin.coordinates.latitude, longitude: cabin.coordinates.latitude},
             description: cabin.description

@@ -15,6 +15,7 @@ export interface Cabin{
         overallCount: number,
         ratings: {}
     },
+
     amenities: [],
     coordinates: {
         latitude: number,
