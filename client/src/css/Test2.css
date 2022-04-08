@@ -1,0 +1,237 @@
+.outerContainer {
+    padding: 20px;
+    height: 100vh;
+
+}
+
+/*---------Forum-----------*/
+
+.contactForm{
+
+    width: 100%;
+    max-width: 800px;
+    margin: auto auto;
+
+
+}
+.form{
+
+}
+
+.rowformRow{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto auto;
+}
+
+.col-6{
+    flex: 1 1;
+    width: 100%;
+    min-width: 200px;
+    margin-bottom: 10px;
+
+}
+
+.col{
+    flex: 1 1;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+}
+
+.formInputOne{
+    width: 80%;
+    height: 25px;
+}
+
+
+.formInputSubject{
+    width: 90%;
+    height: 25px;
+}
+
+
+
+.colMessage{
+    flex: 1 1;
+    display: inline;
+    width: 100%;
+    height: 100%
+}
+.form-controlMessage{
+    width: 90%
+}
+
+/* ----------Button--------------*/
+
+.buttonDiv > button {
+    background-color: #ff7779;
+    color: white;
+    text-transform: inherit;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 0;
+}
+
+.buttonDiv{
+    width: 80%;
+    margin: auto auto;
+}
+
+.buttonDiv > button :hover {
+    background-color: white;
+    color: #ff7779;
+    border-radius: 3px;
+    outline: none;;
+}
+
+
+
+input{
+    border: 1px solid #555;
+    border-radius: 3px;
+    padding-left: 5px;
+}
+
+textarea{
+    border: 1px solid #555;
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-top: 3px;
+}
+
+input:focus {
+    background-color: whitesmoke;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+    .rowformRow{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .col-6{
+        flex: 1 1;
+        width: 100%;
+        min-width: 200px;
+        margin-bottom: 10px;
+
+    }
+
+    .formInputOne{
+        width: 95%;
+        height: 25px;
+        max-width: 250px
+    }
+    .formInputSubject{
+        width: 95%;
+        height: 25px;
+    }
+
+    .form-controlMessage{
+        width: 95%;
+    }
+
+    .buttonDiv{
+        width: 100%;
+        margin: auto auto;
+    }
+
+
+}
+
+
+
+.bottomSection{
+
+    width: 100%;
+    max-width: 800px;
+    margin: auto auto;
+    padding-top: 20px;
+}
+
+.bottomCenter{
+    width: 80%;
+    margin: auto auto;
+    display: flex;
+    padding-right: 5%;
+}
+
+.infoBox{
+    flex: 1 1 auto;
+    margin: 20px;
+    border-radius: 10px;
+    padding-top: 15px;
+    box-shadow: 0 6px 18px 2px rgba(0, 0, 0, .75);
+
+}
+
+.infoBoxUpper{
+    width: 60%;
+    height: calc(80% - 20px);
+    margin: auto auto;
+}
+
+.infoBoxUpper > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.infoBoxLower{
+    margin: 10px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 750px) {
+
+    .bottomCenter{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+    .rowformRow{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .col-6{
+        flex: 1 1;
+        width: 100%;
+        min-width: 200px;
+        margin-bottom: 10px;
+
+    }
+
+    .formInputOne{
+        width: 95%;
+        height: 25px;
+    }
+
+    .infoBox{
+        flex: 1 1 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        padding-top: 15px;
+        box-shadow: 0 6px 18px 2px rgba(0, 0, 0, .75);
+
+    }
+
+}
+
+

@@ -1,0 +1,346 @@
+
+.container {
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    height: 100%;
+}
+
+.left {
+    flex: 100%;
+    min-width: 730px;
+    max-width: 1000px;
+}
+
+.right {
+    flex: 100%;
+    height: 100vh;
+    position: sticky;
+
+    top: 46px;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/*--------------CABIN---------------*/
+
+.cabin {
+    display: flex;
+    flex: 100%;
+    flex-flow: row;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgray;
+}
+
+.cabinImage {
+    width: 300px;
+    height: 200px;
+}
+
+.cabinImage > img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius: 10px;
+    position: center;
+}
+
+.cabinInfo {
+    flex: auto;
+    flex-direction: column;
+    padding-left: 10px;
+    position: relative;
+}
+
+.license {
+    font-size: 10px;
+    font-weight: 500;
+    position: absolute;
+    right: 10px;
+    bottom: 4px;
+}
+
+
+.cabinTop > h2 {
+    font-weight: 700;
+    display: inline;
+    font-size: 20px;
+}
+
+.cabinTop > h4 {
+    display: inline;
+    font-size: 20px;
+    color: darkgreen;
+    margin-left: 10px;
+
+}
+
+.houseRating {
+    display: inline;
+    float: right;
+    position: relative;
+    top: 4px;
+    margin-right: 10px;
+    padding-bottom: 0;
+}
+
+.houseRating > h5 {
+    font-weight: 500;
+    float: right;
+    position: relative;
+    top: 1px;
+    margin-left: 3px;
+}
+
+.cabinBedInfo > h4 {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.cabinBedInfo > h4 > span {
+    margin-right: 10px;
+}
+
+.gray{
+    color: grey;
+}
+
+.houseDescription {
+    width: 380px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.houseDescription > p {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 5px 5px 0 5px;
+
+}
+
+/*------------Amenities------------ */
+
+.amenity {
+    display: inline-block;
+    margin-right: 6px;
+    padding: 1px 5px;
+    background-color: lightgrey;
+    border-radius: 5px;
+
+}
+
+.amenity > h4 {
+    font-size: 11px;
+    font-weight: 400;
+}
+
+
+/*------------Restaurant-----------*/
+
+.restaurant {
+    display: flex;
+    flex: 100%;
+    flex-flow: row;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgray;
+}
+
+.restaurantImage {
+    width: 300px;
+    height: 200px;
+}
+
+.restaurantImage > img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius: 10px;
+    position: center;
+}
+
+.restaurantInfo {
+    flex: auto;
+    flex-direction: column;
+    padding-left: 10px;
+    position: relative;
+}
+
+.restaurantTop > h2 {
+    font-weight: 700;
+    display: inline;
+    font-size: 16px;
+}
+
+.restaurantTop > h4 {
+    display: inline;
+    font-size: 16px;
+    color: darkgreen;
+    margin-left: 10px;
+
+}
+
+.restaurantRating {
+    top: 4px;
+    margin-right: 10px;
+    padding-bottom: 0;
+}
+
+.restaurantRating > h5 {
+    display: inline;
+    font-weight: 500;
+    position: relative;
+    top: 1px;
+    margin-left: 3px;
+}
+
+.price {
+    float: right;
+    position: relative;
+    margin-right: 10px;
+}
+.restaurantBottom > h4{
+    font-size: 12px;
+    margin-top: 3px;
+    font-weight: 500;
+}
+
+
+.topicsInline{
+    margin: 5px 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.topic{
+    flex: 0 0;
+    display: inline;
+    margin: 5px 3px;
+}
+
+.topic > h4{
+    border: 1px grey solid;
+    border-radius: 10px;
+    display: inline;
+    padding: 2px 3px;
+    background-color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.topicHighLight{
+    flex: 0 0;
+    display: inline;
+    margin: 5px 3px;
+}
+
+.topicHighLight > h4{
+    border: 1px black solid;
+    border-radius: 10px;
+    display: inline;
+    padding: 2px 3px;
+    background-color: lightgrey;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.search{
+    flex: 0 0;
+    display: flex;
+    margin: 5px 20px;
+
+
+
+}
+.search > h4{
+    display: inline;
+    margin-right: 5px;
+}
+
+.search > input{
+    display: inline;
+}
+
+.dropboxDiv{
+    flex: 1 0;
+    font-size: 14px;
+    padding: 0;
+
+    margin-left: -10px
+}
+
+
+.searchContainer {
+    display: flex;
+    width: 355px;
+    margin-top: 20px;
+    justify-content: left;
+    margin-left: 3px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+
+    .right {
+        display: none;
+    }
+
+    .left {
+        min-width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 760px) {
+
+
+    .restaurant {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .restaurantImage {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 10px;
+    }
+
+    .cabin {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .cabinImage {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 10px;
+    }
+
+
+    .houseDescription {
+        width: 100%;
+        margin-bottom: 20px
+    }
+}

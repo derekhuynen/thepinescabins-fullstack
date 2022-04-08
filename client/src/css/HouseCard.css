@@ -1,0 +1,103 @@
+.houseCard {
+    flex: 1 1;
+    min-width: 305px;
+    max-width: 600px;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px -9px rgba(0, 0, 0, 0.75);
+    transition: transform 100ms ease-in;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.houseCard:hover {
+    transform: scale(1.07);
+}
+
+.houseCard__img{
+    height: 80%;
+}
+
+.houseCard__img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.houseCard__info {
+    height: 20%;
+    margin-top: -9px;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px;
+}
+
+.houseCard__info > h2 {
+    flex: 1 1 auto;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.houseCard__guest__info > h4{
+    flex: 1 1 auto;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.houseCard__guest__info > h4 >  span{
+    margin-right: 10px;
+}
+
+.houseCard__price {
+    clear: both;
+    margin-bottom: 20px;
+    margin-top: -5px;
+}
+
+.houseCard__price > h3{
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 3px;
+}
+
+.houseCard__price > h4 {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .houseCard {
+        flex: 1 1;
+        max-width: 100%;
+        margin: 10px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 6px 18px -9px rgba(0, 0, 0, 0.75);
+        transition: transform 100ms ease-in;
+        cursor: pointer;
+    }
+    .houseCard:hover {
+        transform: scale(1.05);
+    }
+    .houseCard__info {
+        margin-top: -12px;
+        border-radius: 10px;
+        padding: 20px;
+        border: 1px;
+    }
+
+    .houseCard > img {
+        object-fit: fill;
+        min-width: 200px;
+        min-height: 200px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,170 @@
+.holiday-page-container{
+    background-color: lightgrey;
+}
+
+.holiday-banner{
+    margin: auto auto;
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    height: 300px;
+    background-image: url('/src/CabinPhotos/BigBearBanner/Maple-Colors.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+
+.holiday-banner > h2{
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: white;
+    z-index: 90;
+}
+
+.holiday-banner::Before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+}
+
+.holiday-center{
+    position: relative;
+    z-index: 90;
+    margin: auto auto;
+    height: 200px;
+    width: auto;
+    padding-top: 25px;
+}
+
+.holiday-center > img{
+    z-index: 90;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.holiday-content-container{
+    margin: auto auto;
+    max-width: 1500px;
+    width: 100%;
+    min-height: calc(100vh - 300px - 101px);
+    background-color: white;
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.holiday-content-left{
+    flex: 1 1 60%;
+    min-width: 600px;
+
+}
+.holiday-content-right{
+    flex: 1 1 40%;
+    min-width: 400px;
+}
+
+.holiday-content{
+    padding: 30px;
+
+}
+
+.holiday-content > h2{
+    margin-bottom: 15px;
+
+}
+.holiday-content > h3{
+    margin-bottom: 15px;
+
+}
+
+.holiday-content > p{
+    margin-bottom: 15px;
+
+}
+
+.holiday-info-right{
+    border: 1px black solid;
+    border-radius: 15px;
+    height: auto;
+    width: calc(95% - 20px);
+    padding: 10px;
+    margin:  7px auto;
+
+}
+.holiday-info-right-inner{
+    padding: 5px;
+    border: 1px black solid;
+    border-radius: 15px;
+    margin-top: 15px;
+
+}
+
+
+.holiday-button-div{
+
+    width: fit-content;
+    margin: 40px auto 20px;
+}
+
+.holiday-button-div > button{
+    padding: 5px 10px;
+    font-size: 25px;
+    background-color: #ff7779;
+    border: 1px rgba(175,1,0,1) solid;
+    border-radius: 5px;
+}
+
+.holiday-button-div > button:hover{
+    font-size: 25px;
+    background-color: rgba(200,0,0,1);
+    border: 1px white solid;
+}
+
+
+.holiday-map{
+    margin: auto auto;
+    max-width: 1500px;
+    width: 95%;
+    height: 400px;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .holiday-banner{
+        height: 200px;
+    }
+
+    .holiday-center{
+        padding-top: 0;
+    }
+
+    .holiday-content-left{
+        flex: 0 1 60%;
+        min-width: calc(100vw - 21px);
+        max-width: 100vw;
+
+    }
+
+    .holiday-content-right{
+        flex: 1 1 40%;
+        min-width: calc(100vw - 21px);
+        max-width: 100vw;
+    }
+
+    .holiday-map{
+        display: none;
+    }
+
+
+}

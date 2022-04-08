@@ -1,23 +1,51 @@
-*{
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
+.cabin-container{
+    width: 100%;
+}
+.cabin-photo{
+width: 100%;
 }
 
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid red;
+.cabin-photo > img{
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
 }
 
-.card-container{
-    text-align: center;
-    flex: 45%;
-    border: 1px solid black;
+.cabin-container{
+    box-sizing: border-box;
 }
 
-.card-container > h3 {
-    font-size: 10px;
+
+.cabin-info-container{
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px 5%;
 }
-.card-container > p {
-    font-size: 10px;
+
+
+.cabin-info{
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+}
+
+.cabin-description{
+
+}
+
+.cabin-show-more{
+    width: fit-content;
+    cursor: pointer;
+    margin: 5px 0 0 0;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.cabin-show-all-info{
+    z-index: 90;
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #ff7779;
 }
