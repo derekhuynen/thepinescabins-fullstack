@@ -17,13 +17,14 @@ function loadData() {
                     if (cabin.url.includes("airbnb")) {
                         dataFromURL(cabin)
                     }else{
-                        return new Rating({
+                        let cabinRating = {
                             cabinCode: cabin.cabinCode,
                             overallRating: 0,
                             overallCount: 0,
                             ratings: {}
-                        })
+                        }
 
+                        save(cabinRating,cabin)
                     }
                 })
         }
@@ -37,29 +38,46 @@ function dataFromURL(cabin) {
         })
         .then(data => parseData(data, cabin))
         .then(results => {
-            return new Rating({
-                cabinCode: results.cabinCode,
-                overallRating: results.overallRating,
-                overallCount: results.overallCount,
-                ratings: results.ratings
-            })
+            return results
         }).then((rating) => {
             save(rating,cabin)
     }).catch(err => console.log(err));
 }
 
 function save(rating,cabin){
-    rating.save(function (err, doc) {
-        if (err) {
-            console.log("Rating Failed to Save")
-        } else {
-            Cabin.updateOne({_id: cabin._id}, {rating: rating}, function (err, doc) {
-                if (err) {
-                    console.log("Cabin Update Failed");
-                }
-            })
-        }
+    const result = new Rating ({
+        cabinCode: cabin.cabinCode,
+        overallRating: rating.overallRating,
+        overallCount: rating.overallCount,
+        ratings: rating.ratings
     })
+
+    if(cabin.rating){
+        Rating.updateOne({ _id: cabin.rating._id }, rating, function(err,doc) {
+            if (err) {
+                console.log("Failed to Update")
+            }else{
+                console.log("Updated Rating")
+            }
+        })
+    }else{
+        result.save(function (err, doc) {
+            if (err) {
+                console.log("Rating Failed to Save")
+            } else {
+                Cabin.updateOne({_id: cabin._id}, {rating: result}, function (err, doc) {
+                    if (err) {
+                        console.log("Cabin Update Failed");
+                    }
+                })
+            }
+        })
+    }
+
+
+
+
+
 }
 
 

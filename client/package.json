@@ -6,6 +6,7 @@
   "dependencies": {
     "@iconify/icons-ant-design": "^1.2.2",
     "@iconify/icons-bi": "^1.2.2",
+    "@iconify/icons-bxs": "^1.2.3",
     "@iconify/icons-carbon": "^1.2.3",
     "@iconify/icons-fluent": "^1.2.4",
     "@iconify/icons-fontisto": "^1.2.2",

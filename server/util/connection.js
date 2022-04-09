@@ -5,7 +5,7 @@ import 'dotenv/config'
 
 const MONGO_URI = process.env.CONNECTION_STRING;
 
-export const db = mongoose.createConnection("mongodb://localhost:27017/Website");
+export const db = mongoose.createConnection(MONGO_URI);
 
 // handlers
 db.on('connecting', () => {

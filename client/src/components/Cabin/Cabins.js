@@ -43,7 +43,7 @@ export default function Cabins() {
     const history = useHistory();
 
     useEffect(() => {
-        axios.get("http://localhost:3001/api/cabin")
+        axios.get(process.env.BASE_URL + "/cabin")
             .then(res => {
                 console.log(res.data.item);
                 setCabinList(res.data.item)

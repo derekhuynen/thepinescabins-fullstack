@@ -3,8 +3,9 @@ import {useParams} from "react-router-dom";
 import starFilled from "@iconify/icons-ant-design/star-filled";
 import axios from "axios";
 import {Icon} from "@iconify/react";
-import photo from '../../CabinPhotos/Cabins/HolidaySmall.jpeg'
 import '../../css/Cabin.css'
+import Calender from "../Calendar/Calender.js";
+import 'dotenv/config'
 
 
 export default function Cabin() {
@@ -14,7 +15,7 @@ export default function Cabin() {
     let params = useParams();
 
     useEffect(() => {
-        axios.get("http://localhost:3001/api/cabin/" + params.id)
+        axios.get(process.env.BASE_URL + "/cabin/" + params.id)
             .then(res => {
                 console.log(res.data);
                 setCabin(res.data.item)
@@ -26,24 +27,17 @@ export default function Cabin() {
 
     return cabin ? (
         <div className={"cabin-container"}>
-
             <div className={"cabin-photo"}>
                 <img src={`https://wpines.s3.us-west-1.amazonaws.com/${cabin.photos[0]}`} alt="img"/>
             </div>
-
             <div className={"cabin-info-container"}>
-
-
                 <h1 className={"cabin-header"}>Cabin: {cabin.cabinName}</h1>
-
-
                 <div className={"cabin-info"}>
                     <span>
                         <Icon icon={starFilled} color="#e61e4d" width="15" height="15" inline={true}/>
                         {cabin.rating.overallRating} - {cabin.rating.overallCount} reviews
                     </span>
                 </div>
-
                 <div className={"cabin-info"}>
                     <div className={"cabin-description"}>
                         <span>
@@ -54,23 +48,21 @@ export default function Cabin() {
                         </span>
                     </div>
                 </div>
-
                 <div className={"cabin-info"}>
                     <div className={"cabin-description"}>
                         {cabin.description}
                         {show}
-
                         <div className={"cabin-show-more"} onClick={()=>setShow(true)}>
                             <span>Show More ></span>
                         </div>
                     </div>
                 </div>
-
+                <div className={"cabin-calendar"}>
+                    <Calender boxSize={50} fontSize={20}/>
+                </div>
                 <div className={"cabin-map"}>
-
                 </div>
             </div>
-
 
 
             <div className={"cabin-show-all-info"} hidden={!show} onClick={()=> setShow(false)}>

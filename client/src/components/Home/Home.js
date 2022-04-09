@@ -21,7 +21,7 @@ function Home() {
     const [cabinList, setCabinList] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:3001/api/cabin")
+        axios.get(process.env.BASE_URL + "/cabin")
             .then(res => {
                 console.log(res.data);
                 setCabinList(res.data.item)

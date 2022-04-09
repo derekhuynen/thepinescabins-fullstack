@@ -49,3 +49,8 @@ width: 100%;
     left: 0;
     background-color: #ff7779;
 }
+
+.cabin-calendar{
+    width: 100%;
+    padding: 10px 0;
+}
