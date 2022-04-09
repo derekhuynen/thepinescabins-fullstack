@@ -4,10 +4,10 @@ import Map from '../Map'
 import {cabins} from '../../JSON/cabins.js'
 import {Icon} from "@iconify/react";
 import starFilled from "@iconify/icons-ant-design/star-filled";
-import photo from '../../CabinPhotos/Cabins/HolidaySmall.jpeg'
 
 import 'react-dropdown/style.css';
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 
 function trimString(str) {
@@ -32,10 +32,6 @@ function items2(amenities) {
     )
 }
 
-function openLink(link) {
-    window.open(link)
-}
-
 
 const center = {
     lat: 34.24651450381265,
@@ -44,6 +40,7 @@ const center = {
 
 export default function Cabins() {
     const [cabinList, setCabinList] = useState([]);
+    const history = useHistory();
 
     useEffect(() => {
         axios.get("http://localhost:3001/api/cabin")
@@ -59,11 +56,10 @@ export default function Cabins() {
 
     const displayCabins = cabinList.map((cabin, index) => {
         return (
-
-            <div key={index} className={'cabin'} onClick={() => openLink(cabin.url)}>
+            <div key={index} className={'cabin'} onClick={() => history.push(`/cabin/${cabin._id}`)}>
 
                 <div className={"cabinImage"}>
-                    <img src={photo} alt={cabin.cabinName}/>
+                    <img src={`https://wpines.s3.us-west-1.amazonaws.com/${cabin.photos[0]}`} alt={cabin.cabinName}/>
                 </div>
 
                 <div className={'cabinInfo'}>
@@ -92,11 +88,7 @@ export default function Cabins() {
                     </div>
                     <h4 className={"license"}>License: {cabin.license}</h4>
                 </div>
-
-
             </div>
-
-
         )
     })
     return cabinList ? (

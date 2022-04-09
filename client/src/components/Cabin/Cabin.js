@@ -28,7 +28,7 @@ export default function Cabin() {
         <div className={"cabin-container"}>
 
             <div className={"cabin-photo"}>
-                <img src={photo} alt="img"/>
+                <img src={`https://wpines.s3.us-west-1.amazonaws.com/${cabin.photos[0]}`} alt="img"/>
             </div>
 
             <div className={"cabin-info-container"}>

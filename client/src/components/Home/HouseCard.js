@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../../css/HouseCard.css'
 import { Icon } from "@iconify/react";
 import starFilled from '@iconify/icons-ant-design/star-filled';
+import { useHistory } from "react-router-dom";
+import SlideShow from '../SlideShow/SlideShow.js'
 
 
 
@@ -16,23 +18,17 @@ const displayRating = (cabin) => {
         )
 }
 
-function HouseCard(props) {
-
-    const cabin = props.cabin
-
-    function openLink(){
-        window.open(cabin.link)
-    }
+function HouseCard({cabin}) {
+    const history = useHistory();
 
 
     return (
-        <div id={props.index} key={props.index} className={'houseCard'} onClick={openLink}>
-
+        <div key={cabin.cabinCode} className={'houseCard'}>
             <div className={"houseCard__img"}>
-                <img src={`https://wpines.s3.us-west-1.amazonaws.com/${cabin.photos[0]}`} alt={cabin.cabinName}/>
+                <SlideShow cabin = {cabin}/>
             </div>
 
-            <div className="houseCard__info">
+            <div className="houseCard__info" onClick={() => history.push(`/cabin/${cabin._id}`)}>
                 <h2>{cabin.cabinName}</h2>
                 <div className={'houseCard__guest__info'}>
                     <h4><span>Guests: {cabin.guests}</span></h4>

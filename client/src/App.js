@@ -32,7 +32,6 @@ function App() {
 
                     <Route path="/holiday" component={OctoberFest}/>
 
-                    <Route path="/holiday" component={OctoberFest}/>
 
                     <Route path="/cabin/:id" component={Cabin}/>
 
