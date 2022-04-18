@@ -1,13 +1,11 @@
 import React, {useEffect, useRef, useState} from 'react'
-import Day from "./Day"
+import Day from "./Day.js"
 
-import {Icon} from '@iconify/react';
-import leftArrowCircle from '@iconify/icons-bxs/left-arrow-circle';
-import rightArrowCircle from '@iconify/icons-bxs/right-arrow-circle';
 import './Calender.css';
+import {BsArrowLeftCircleFill, BsArrowRightCircleFill} from "react-icons/bs";
 
 const Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const Days = {Sunday: "Su", Monday: "Mo", Tuesday: "Tu" , Wednesday: "We", Thursday: "Th", Friday: "Fr", Saturday: "Sa"}
+const Days = {Sunday: "Su", Monday: "Mo", Tuesday: "Tu", Wednesday: "We", Thursday: "Th", Friday: "Fr", Saturday: "Sa"}
 
 
 const today = new Date();
@@ -19,7 +17,7 @@ function getDayOfWeek(year, month, day) {
 
 //Get Days in Month. Date() where day = 0 return totals days of previous month.
 function getDaysInMonth(year, month) {
-    const temp = increaseMonth(year,month);
+    const temp = increaseMonth(year, month);
     return new Date(temp.year, temp.month, 0).getDate();
 }
 
@@ -65,12 +63,12 @@ const createDays = (year, month) => {
     const daysInMonth = getDaysInMonth(year, month);
 
     //Get Number of Days in Previous Month.
-    const previousYearMonth = decreaseMonth(year,month);
+    const previousYearMonth = decreaseMonth(year, month);
     const daysInPreviousMonth = getDaysInMonth(previousYearMonth.year, previousYearMonth.month);
-    const nextYearMonth = increaseMonth(year,month);
+    const nextYearMonth = increaseMonth(year, month);
 
     //Create the Spacer Boxes From Previous Month.
-    for (let i = daysInPreviousMonth - dayOfWeek + 1; i <= daysInPreviousMonth ; i++) {
+    for (let i = daysInPreviousMonth - dayOfWeek + 1; i <= daysInPreviousMonth; i++) {
         const temp = new Date(previousYearMonth.year, previousYearMonth.month, i)
         results.push({date: null, styles: "calendar-box", highLighted: false, day: "nothing"})
     }
@@ -78,10 +76,15 @@ const createDays = (year, month) => {
     //Create Boxes for Each Day of Current Month.
     for (let i = 1; i <= daysInMonth; i++) {
         const temp = new Date(year, month, i);
-        results.push({date: temp, styles: (isEqual(temp, today) ? "calendar-box calendar-today" : "calendar-box"), highLighted: false, day: "calendar-day"})
+        results.push({
+            date: temp,
+            styles: (isEqual(temp, today) ? "calendar-box calendar-today" : "calendar-box"),
+            highLighted: false,
+            day: "calendar-day"
+        })
     }
 
-    const totalDays = ((dayOfWeek + daysInMonth) > 35) ? 42: 35;
+    const totalDays = ((dayOfWeek + daysInMonth) > 35) ? 42 : 35;
     //Create the Boxes to Fill the Remaining Spots of the Calender with info for next Month.
     for (let i = 1; i <= (totalDays - daysInMonth - dayOfWeek); i++) {
         const temp = new Date(nextYearMonth.year, nextYearMonth.month, i)
@@ -108,9 +111,9 @@ export default function Calender(props) {
         )
     }, [year, month])
 
-    const onClick = (date,isGrey) => {
+    const onClick = (date, isGrey) => {
 
-        if(isGrey){
+        if (isGrey) {
             setMonth(date.getMonth())
         }
         if (props.selectedDate !== undefined && isEqual(props.selectedDate, date)) {
@@ -123,35 +126,35 @@ export default function Calender(props) {
     const boxSize = props.boxSize;
     const fontSize = props.fontSize;
 
-return (
-    <div className={"calendar-container"} style={{width:(boxSize*7+4), fontSize: fontSize}}>
+    return (
+        <div className={"calendar-container"} style={{width: (boxSize * 7 + 4), fontSize: fontSize}}>
 
             <div className={"calendar-header-month"}>
-                    <Icon icon={leftArrowCircle} className={"calendar-arrow"} onClick={() => {
-                        const temp = decreaseMonth(year, month);
-                        setYear(temp.year);
-                        setMonth(temp.month);
-                    }}/>
+                <BsArrowLeftCircleFill className={"calendar-arrow"} onClick={() => {
+                    const temp = decreaseMonth(year, month);
+                    setYear(temp.year);
+                    setMonth(temp.month);
+                }}/>
                 <h2> {Months[month]} ({year})</h2>
-                <Icon icon={rightArrowCircle} className={"calendar-arrow"} onClick={() => {
+                <BsArrowRightCircleFill className={"calendar-arrow"} onClick={() => {
                     const temp = increaseMonth(year, month);
                     setYear(temp.year);
                     setMonth(temp.month);
                 }}/>
 
-        </div>
+            </div>
 
-        <div className={"calender-bottom"}>
-            <div className={"calendar-headers"}>
-                {createHeaders(boxSize)}
-            </div>
-            <div className={"calendar-days"}>
-                {list.map((item, index) => {
-                    item.highLighted = (props.selectedDate !== undefined && isEqual(item.date, props.selectedDate));
-                    return (<Day {...item} onClick={onClick} key={index} boxSize={boxSize}/>)
-                })}
+            <div className={"calender-bottom"}>
+                <div className={"calendar-headers"}>
+                    {createHeaders(boxSize)}
+                </div>
+                <div className={"calendar-days"}>
+                    {list.map((item, index) => {
+                        item.highLighted = (props.selectedDate !== undefined && isEqual(item.date, props.selectedDate));
+                        return (<Day {...item} onClick={onClick} key={index} boxSize={boxSize}/>)
+                    })}
+                </div>
             </div>
         </div>
-    </div>
-)
+    )
 }

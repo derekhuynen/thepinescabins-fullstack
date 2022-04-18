@@ -1,24 +1,22 @@
 import React, {useEffect, useState} from 'react';
 import '../../css/Home.css';
-import Banner from '../Nav/Banner'
-import HouseCard from './HouseCard'
-import Card from './Card'
+import Banner from '../Nav/Banner.js'
+import HouseCard from './HouseCard.js'
+import Card from './Card.js'
 
 import House from '../../CabinPhotos/Cabins/GoldRushSmall.JPG'
 import Hiking from '../../CabinPhotos/City720/Hiking.JPG'
 import Village from '../../CabinPhotos/City720/Village.JPG'
 
-import { Icon } from '@iconify/react';
-import baselineHiking from '@iconify/icons-ic/baseline-hiking';
-import iRestaurant from '@iconify/icons-medical-icon/i-restaurant';
-import houseDoor from '@iconify/icons-bi/house-door';
+import {BsHouseDoorFill} from "react-icons/bs";
+import {MdHiking,MdRestaurant} from "react-icons/md";
 
 
 function Home() {
     const [cabinList, setCabinList] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:3001/api/cabin")
+        fetch( "/api/cabin")
             .then(res =>
                 res.json()
             ).then(data => {
@@ -44,19 +42,19 @@ function Home() {
                     image1={House}
                     title="All Cabins"
                     link= "/cabins"
-                    icon={<Icon icon={houseDoor} width="20" height="20" inline={true}/>}
+                    icon={<BsHouseDoorFill/>}
                 />
                 <Card
                     image1= {Hiking}
                     title="Things To Do"
                     link= "/activities"
-                    icon={<Icon icon={baselineHiking} width="20" height="20" inline={true}/>}
+                    icon={<MdHiking/>}
                 />
                 <Card
                     image1={Village}
                     title="Restaurants"
                     link= "/restaurants"
-                    icon={<Icon icon={iRestaurant} width="20" height="20" inline={true}/>}
+                    icon={<MdRestaurant/>}
                 />
             </div>
             {cabinList ?

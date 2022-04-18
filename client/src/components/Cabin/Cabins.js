@@ -1,11 +1,9 @@
 import '../../css/Test.css';
 import React, {useEffect, useState} from "react";
-import Map from '../Map'
+import Map from '../Map.js'
 import {cabins} from '../../JSON/cabins.js'
-import {Icon} from "@iconify/react";
-import starFilled from "@iconify/icons-ant-design/star-filled";
+import {BsStarFill} from "react-icons/bs";
 
-import 'react-dropdown/style.css';
 import { useHistory } from "react-router-dom";
 import SlideShow from "../SlideShow/SlideShow.js";
 
@@ -61,7 +59,6 @@ export default function Cabins() {
 
                 <div className={"cabinImage"}>
                     <SlideShow cabin = {cabin}/>
-                    {/*<img src={`https://wpines.s3.us-west-1.amazonaws.com/${cabin.photos[0]}`} alt={cabin.cabinName}/>*/}
                 </div>
 
                 <div className={'cabinInfo'} onClick={() => history.push(`/cabin/${cabin._id}`)} >
@@ -70,7 +67,7 @@ export default function Cabins() {
 
                         {cabin.rating ?
                             <div className={'houseRating'}>
-                                <Icon icon={starFilled} color="#e61e4d" width="18" height="18" inline={true}/>
+                                <BsStarFill className={"houseRating_star"}/>
                                 <h5 className={"gray"}>({cabin.rating.overallCount} reviews)</h5>
                                 <h5>{cabin.rating.overallRating}</h5>
                             </div>

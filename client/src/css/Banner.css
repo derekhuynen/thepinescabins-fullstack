@@ -1,5 +1,5 @@
 .banner {
-    background-image: url('/src/CabinPhotos/BigBearBanner/Banner4.JPG');
+    background-image: url('../CabinPhotos/BigBearBanner/Banner4.JPG');
     height: 33vh;
     background-position: bottom; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -22,9 +22,13 @@
     background-color: #ff7779;
     color: white;
     text-transform: inherit;
+    font-size: 16px;
     font-weight: 600;
     margin-left: 45px;
-    margin-top: 30px;
+    margin-top: 25px;
+    padding: 5px;
+    border-radius: 4px;
+    border: #ff7779 1px solid;
 }
 
 .banner__info > button:hover {

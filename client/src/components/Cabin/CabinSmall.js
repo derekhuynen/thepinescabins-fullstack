@@ -1,6 +1,5 @@
-import {Icon} from "@iconify/react";
-import starFilled from "@iconify/icons-ant-design/star-filled";
 import React from "react";
+import {BsStarFill} from "react-icons/bs";
 
 
 function openLink(link) {
@@ -19,7 +18,7 @@ export default function CabinSmall({info}) {
             }}>
                 <h2>{info.title}</h2>
                 <div className={'rating'}>
-                    <Icon icon={starFilled} color="#e61e4d" width="15" height="15" inline={true}/>
+                    <BsStarFill style={{color: "#e61e4d", fontSize: 14}}/>
                     <h5>{info.rating}</h5>
                 </div>
                 <div className={"locationInfo_guest"}>

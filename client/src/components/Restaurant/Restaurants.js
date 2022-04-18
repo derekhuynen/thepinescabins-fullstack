@@ -1,6 +1,6 @@
 import '../../css/Test.css';
 import React from "react";
-import Map from '../Map'
+import Map from '../Map.js'
 import {yelp} from '../../JSON/yelp.js'
 import StarRatings from 'react-star-ratings';
 

@@ -1,6 +1,4 @@
 
-
-
 export const getFilteredRows = (data, filterKey) => {
     console.log(data)
     return data.filter((single) => {

@@ -44,6 +44,15 @@
     clear: both;
 }
 
+.houseCard_star{
+    float: left;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 12px;
+    margin-left: 3px;
+    color: #e61e4d;
+}
+
 .houseCard__price > h3{
     font-size: 14px;
     font-weight: 600;

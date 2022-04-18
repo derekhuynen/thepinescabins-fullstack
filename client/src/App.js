@@ -2,15 +2,15 @@ import React from "react";
 import './css/App.css';
 
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Header from './components/Nav/Header'
-import Home from './components/Home/Home'
-import Footer from './components/Nav/Footer'
-import Weather from './components/Weather/Weather'
-import Cabins from './components/Cabin/Cabins'
-import Restaurants from './components/Restaurant/Restaurants'
-import Activities from './components/Activities/Activities'
-import Contact from './components/Contact'
-import OctoberFest from './components/Holiday/OctoberFestPage'
+import Header from './components/Nav/Header.js'
+import Home from './components/Home/Home.js'
+import Footer from './components/Nav/Footer.js'
+import Weather from './components/Weather/Weather.js'
+import Cabins from './components/Cabin/Cabins.js'
+import Restaurants from './components/Restaurant/Restaurants.js'
+import Activities from './components/Activities/Activities.js'
+import Contact from './components/Contact.js'
+import OctoberFest from './components/Holiday/OctoberFestPage.js'
 import Cabin from "./components/Cabin/Cabin.js";
 
 function App() {

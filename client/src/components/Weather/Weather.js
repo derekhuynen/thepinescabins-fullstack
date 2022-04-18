@@ -1,6 +1,6 @@
 import React from "react";
 import '../../css/Weather.css'
-import {getIcon} from './iconsMap'
+import {getIcon} from './iconsMap.js'
 
 
 function openLink(link) {

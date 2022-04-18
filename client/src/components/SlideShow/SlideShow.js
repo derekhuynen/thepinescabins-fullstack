@@ -1,4 +1,4 @@
-import react, {useState} from 'react'
+import {useState} from 'react'
 import './slideShow.css'
 import {BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from "react-icons/bs";
 

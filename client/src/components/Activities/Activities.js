@@ -1,8 +1,8 @@
 import '../../css/Test.css';
 import React, {useState} from "react";
-import Map from '../Map'
+import Map from '../Map.js'
 import {businesses} from '../../JSON/businesses.js'
-import {getFilteredRows} from "../filter";
+import {getFilteredRows} from "../filter.js";
 
 
 function items2(topics) {

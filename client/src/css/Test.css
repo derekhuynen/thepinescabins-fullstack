@@ -94,6 +94,12 @@
     padding-bottom: 0;
 }
 
+.houseRating_star{
+    color: #e61e4d;
+    font-size: 15px;
+
+}
+
 .houseRating > h5 {
     font-weight: 500;
     float: right;

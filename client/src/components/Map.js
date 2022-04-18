@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
 import GoogleMapReact from 'google-map-react'
-import {Icon} from '@iconify/react';
-import locationIcon from '@iconify/icons-mdi/map-marker';
 import '../css/Map.css'
-import CabinSmall from './Cabin/CabinSmall'
-import RestaurantSmall from "./Restaurant/RestaurantSmall";
-import ActivitiesSmall from './Activities/ActivitiesSmall'
+import CabinSmall from './Cabin/CabinSmall.js'
+import RestaurantSmall from "./Restaurant/RestaurantSmall.js";
+import ActivitiesSmall from './Activities/ActivitiesSmall.js'
+import {MdLocationPin} from "react-icons/md";
 
 
 const LocationInfoBox = ({info, comp}) => {
@@ -25,7 +24,7 @@ const LocationInfoBox = ({info, comp}) => {
 const AnyReactComponent = ({onClick}) => {
     return (
         <div className={'marker'} onClick={onClick}>
-            <Icon className={"icon"} icon={locationIcon} color="red" width="25" height="25"/>
+            <MdLocationPin className={"icon"} style={{color: "red", width: "25", height: "25"}} />
         </div>
     )
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import '../../css/Banner.css'
-import { Button } from "@material-ui/core";
 import  {useHistory}  from "react-router-dom";
 
 function Banner() {
@@ -13,7 +12,7 @@ function Banner() {
                 <h4>
                     Big Bear Cabin Management Company
                 </h4>
-                <Button onClick={() => history.push('/contact')} variant='outlined'>Contact Us</Button>
+                <button onClick={() => history.push('/contact')}>Contact Us</button>
             </div>
         </div>
     )

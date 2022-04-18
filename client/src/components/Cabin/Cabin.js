@@ -1,11 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import {useParams} from "react-router-dom";
-import starFilled from "@iconify/icons-ant-design/star-filled";
-import axios from "axios";
-import {Icon} from "@iconify/react";
 import '../../css/Cabin.css'
 import Calender from "../Calendar/Calender.js";
-import 'dotenv/config'
+import {BsStarFill} from "react-icons/bs";
 
 
 export default function Cabin() {
@@ -15,11 +12,12 @@ export default function Cabin() {
     let params = useParams();
 
     useEffect(() => {
-        axios.get("http://localhost:3001/api/cabin/" + params.id)
-            .then(res => {
-                console.log(res.data);
-                setCabin(res.data.item)
-            })
+        fetch("/api/cabin/" + params.id)
+            .then(res =>
+               res.json()
+            ).then(data =>{
+            setCabin(data.item)
+        })
             .catch(function (error) {
                 console.log(error);
             })
@@ -34,7 +32,7 @@ export default function Cabin() {
                 <h1 className={"cabin-header"}>Cabin: {cabin.cabinName}</h1>
                 <div className={"cabin-info"}>
                     <span>
-                        <Icon icon={starFilled} color="#e61e4d" width="15" height="15" inline={true}/>
+                        <BsStarFill/>
                         {cabin.rating.overallRating} - {cabin.rating.overallCount} reviews
                     </span>
                 </div>
