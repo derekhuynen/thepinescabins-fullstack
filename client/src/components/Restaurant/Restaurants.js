@@ -58,7 +58,6 @@ const items = yelp.map((restaurant, index) => {
                     <h4>{restaurant.location.display_address.toString()}</h4>
                     <h4>{restaurant.display_phone}</h4>
                 </div>
-
             </div>
         </div>
     )
@@ -82,7 +81,5 @@ export default function Test() {
                 <Map items={yelp} zoom={16} center={center} comp={"restaurant"}/>
             </div>
         </div>
-
     )
-
 }

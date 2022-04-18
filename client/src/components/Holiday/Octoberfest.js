@@ -6,8 +6,6 @@ import {useHistory} from "react-router-dom";
 
 export default function OctoberFest(){
     const history = useHistory();
-
-
     return (
 
         <div className={"octoberFest-banner"} onClick={()=> history.push('/holiday')}>
@@ -17,5 +15,4 @@ export default function OctoberFest(){
             <h2>Click For More Info</h2>
         </div>
     )
-
 }

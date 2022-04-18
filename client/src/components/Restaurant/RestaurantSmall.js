@@ -29,7 +29,6 @@ export default function RestaurantSmall({info}) {
                     />
                     <h5 className={"gray"}>({info.review_count} reviews)</h5>
                 </div>
-
             </div>
         </div>
     )

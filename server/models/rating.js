@@ -30,4 +30,4 @@ RatingSchema.statics.createItem = function (req) {
 
 
 //Export model
-export default connections.db.model('Rating', RatingSchema);
+export default mongoose.model('Rating', RatingSchema);

@@ -47,4 +47,4 @@ EventSchema.statics.createItem = function (req) {
 
 
 //Export model
-export default connections.db.model('Event', EventSchema);
+export default mongoose.model('Event', EventSchema);

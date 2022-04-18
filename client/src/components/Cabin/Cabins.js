@@ -6,8 +6,8 @@ import {Icon} from "@iconify/react";
 import starFilled from "@iconify/icons-ant-design/star-filled";
 
 import 'react-dropdown/style.css';
-import axios from "axios";
 import { useHistory } from "react-router-dom";
+import SlideShow from "../SlideShow/SlideShow.js";
 
 
 function trimString(str) {
@@ -43,11 +43,12 @@ export default function Cabins() {
     const history = useHistory();
 
     useEffect(() => {
-        axios.get(process.env.BASE_URL + "/cabin")
-            .then(res => {
-                console.log(res.data.item);
-                setCabinList(res.data.item)
-            })
+        fetch("http://localhost:3001/api/cabin")
+            .then(res =>
+                res.json()
+            ).then(data => {
+            setCabinList(data.item)
+        })
             .catch(function (error) {
                 console.log(error);
             })
@@ -56,13 +57,14 @@ export default function Cabins() {
 
     const displayCabins = cabinList.map((cabin, index) => {
         return (
-            <div key={index} className={'cabin'} onClick={() => history.push(`/cabin/${cabin._id}`)}>
+            <div key={index} className={'cabin'}>
 
                 <div className={"cabinImage"}>
-                    <img src={`https://wpines.s3.us-west-1.amazonaws.com/${cabin.photos[0]}`} alt={cabin.cabinName}/>
+                    <SlideShow cabin = {cabin}/>
+                    {/*<img src={`https://wpines.s3.us-west-1.amazonaws.com/${cabin.photos[0]}`} alt={cabin.cabinName}/>*/}
                 </div>
 
-                <div className={'cabinInfo'}>
+                <div className={'cabinInfo'} onClick={() => history.push(`/cabin/${cabin._id}`)} >
                     <div className={'cabinTop'}>
                         <h2>{cabin.cabinName}</h2>
 

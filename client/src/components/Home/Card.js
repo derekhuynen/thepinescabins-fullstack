@@ -5,7 +5,6 @@ import { useHistory } from "react-router-dom";
 function HouseCard({image1, title, icon, link}) {
     const history = useHistory();
 
-
     return (
         <div className='card' onClick={() => history.push(link)}>
             <div className={"imageDiv"}>
@@ -21,5 +20,4 @@ function HouseCard({image1, title, icon, link}) {
         </div>
     )
 }
-
 export default HouseCard

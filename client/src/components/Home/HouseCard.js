@@ -5,8 +5,6 @@ import starFilled from '@iconify/icons-ant-design/star-filled';
 import { useHistory } from "react-router-dom";
 import SlideShow from '../SlideShow/SlideShow.js'
 
-
-
 const displayRating = (cabin) => {
     return (
             <div className={'houseCard__price'}>
@@ -20,7 +18,6 @@ const displayRating = (cabin) => {
 
 function HouseCard({cabin}) {
     const history = useHistory();
-
 
     return (
         <div key={cabin.cabinCode} className={'houseCard'}>

@@ -15,7 +15,7 @@ export default function Cabin() {
     let params = useParams();
 
     useEffect(() => {
-        axios.get(process.env.BASE_URL + "/cabin/" + params.id)
+        axios.get("http://localhost:3001/api/cabin/" + params.id)
             .then(res => {
                 console.log(res.data);
                 setCabin(res.data.item)

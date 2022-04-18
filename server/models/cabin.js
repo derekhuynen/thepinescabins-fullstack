@@ -73,4 +73,4 @@ CabinSchema.statics.createItem = function (req) {
 //     });
 
 //Export model
-export default connections.db.model('Cabin', CabinSchema);
+export default mongoose.model('Cabin', CabinSchema);

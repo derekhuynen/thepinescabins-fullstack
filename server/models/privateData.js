@@ -39,4 +39,4 @@ PrivateDataSchema.statics.createItem = function (req) {
 
 
 //Export model
-export default connections.db.model('PrivateData', PrivateDataSchema);
+export default mongoose.model('PrivateData', PrivateDataSchema);

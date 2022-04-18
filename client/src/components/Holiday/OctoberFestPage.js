@@ -19,7 +19,6 @@ const oktoberfest = [
         link: "https://bigbearevents.com/oktoberfest/directions/",
         image1: image
     }
-
 ]
 
 const center = {
@@ -31,11 +30,7 @@ function openLink(link){
     window.open(link)
 }
 
-
-
 export default function OctoberFestPage() {
-
-
     return (
         <div className={"holiday-page-container"}>
             <div className={"holiday-banner"}>
@@ -43,9 +38,7 @@ export default function OctoberFestPage() {
                     <img src={bannerPic} alt={"OktoberFest in Big Bear 2021"}/>
                 </div>
             </div>
-
             <div className={"holiday-content-container"}>
-
                 <div className={"holiday-content-left"}>
                     <div className={"holiday-content"}>
                         <h1>Oktoberfest</h1>
@@ -116,14 +109,8 @@ export default function OctoberFestPage() {
                             <button onClick={() => openLink("https://bigbearevents.com/pricing-2021/")}>Ticket Pricing</button>
                         </div>
                     </div>
-
                 </div>
-
-
-
             </div>
-
         </div>
-
     )
 }
